@@ -24,7 +24,8 @@
       <!-- Login/Logout -->
       <div class="navbar-nav ml-auto">
         <div class="nav-item dropdown login-dropdown">
-          <a th:href="@{/login}" class="nav-item nav-link"> <i class="fa fa-sign-in"></i> Login </a>
+<!--          <a th:href="@{/login}" class="nav-item nav-link"> <i class="fa fa-sign-in"></i> Login </a>-->
+          <a href="#loginModal" class="nav-item nav-link " data-toggle="modal"><i class="fa fa-user-o"></i> Login</a>
 
           <!--                        <span class="user-title">${user.prenom} ${user.nom}</span>-->
           <!--                        <a href="./login?action=logout"-->
@@ -35,7 +36,85 @@
       </div>
     </nav>
   </header>
+
+  <div id="loginModal" class="modal fade">
+    <div class="modal-dialog modal-login">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="avatar">
+            <img th:src="@{/images/avatar.png}" alt="avatar" />
+          </div>
+          <h4 class="modal-title">Login</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form action="./login?action=login" method="post">
+            <div class="form-group">
+              <i class="fa fa-user"></i> <input type="text" class="form-control"
+                                                placeholder="Login" name="login" required="required">
+            </div>
+            <div class="form-group">
+              <i class="fa fa-lock"></i> <input type="password"
+                                                class="form-control" placeholder="Password" name="password" required="required">
+            </div>
+            <div class="form-group">
+              <input type="submit" class="btn btn-primary btn-block btn-lg"
+                     value="Login">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <a href="#createModal" class="nav-item nav-link" data-dismiss="modal" data-toggle="modal" ><i class="fa fa-user"></i>Inscription</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="createModal" class="modal fade">
+    <div class="modal-dialog modal-login">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="avatar">
+            <img th:src="@{images/avatar.png}"  alt="avatar" />
+          </div>
+          <h4 class="modal-title">Create</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form action="./login?action=signup" method="post">
+            <div class="form-group">
+              <i class="fa fa-user"></i> <input type="text" class="form-control"
+                                                placeholder="Prénom" name="prenom" required="required">
+            </div>
+            <div class="form-group">
+              <i class="fa fa-user"></i> <input type="text"
+                                                class="form-control" placeholder="Nom" name="nom" required="required">
+            </div>
+            <div class="form-group">
+              <i class="fa fa-user"></i> <input type="text" class="form-control"
+                                                placeholder="Login" name="login" required="required">
+            </div>
+            <div class="form-group">
+              <i class="fa fa-lock"></i> <input type="password"
+                                                class="form-control" placeholder="Password" name="password" required="required">
+            </div>
+            <div class="form-group">
+              <i class="fa fa-lock"></i> <input type="password"
+                                                class="form-control" placeholder="Confirmation" name="password2" required="required">
+            </div>
+            <div class="form-group">
+              <input type="submit" class="btn btn-primary btn-block btn-lg" value="Inscription">
+            </div>
+          </form>
+        </div>
+        <!-- 			<div class="modal-footer">
+                        <a href="#loginModal" class="nav-item nav-link" data-dismiss="modal" data-toggle="modal" ><i class="fa fa-user"></i>Login</a>
+                    </div> -->
+      </div>
+    </div>
+  </div>
 </div>
+
+
 
 <!--  <div th:fragment="header">-->
 <!--    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">-->
