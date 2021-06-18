@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="fr"
+      th:replace="~{../templates/layout :: layout (~{::body},'articles')}">
+<body>
+
+<div role="main" class="container">
+<!--  <div th:substituteby="index::logout"></div>-->
+  <h1>Espace Sécurisé!</h1>
+  <p><a href="/index" th:href="@{/index}">Retour page d'accueil</a></p>
+
+  <p>
+    <a class="btn btn-sm btn-warning" role="button" th:href="@{/logout}">Logout</a>
+  </p>
+</div>
+
+</body>
+</html>

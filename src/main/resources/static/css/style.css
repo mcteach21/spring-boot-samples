@@ -572,3 +572,7 @@ img {
     vertical-align: middle;
     border-style: none;
 }
+
+.login-dropdown a, .login-dropdown span{
+    float:left;
+}
