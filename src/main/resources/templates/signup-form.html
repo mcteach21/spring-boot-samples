@@ -1,0 +1,27 @@
+<div th:fragment="signup-form">
+    <form th:action="@{/signup}" th:object="${user}" method="post">
+        <div class="form-group">
+            <i class="fa fa-user"></i> <input type="text" class="form-control"
+                                              placeholder="Prénom" name="prenom" required="required">
+        </div>
+        <div class="form-group">
+            <i class="fa fa-user"></i> <input type="text"
+                                              class="form-control" placeholder="Nom" name="nom" required="required">
+        </div>
+        <div class="form-group">
+            <i class="fa fa-user"></i> <input type="text" class="form-control"
+                                              placeholder="Login" name="login" required="required">
+        </div>
+        <div class="form-group">
+            <i class="fa fa-lock"></i> <input type="password"
+                                              class="form-control" placeholder="Password" name="password" required="required">
+        </div>
+        <div class="form-group">
+            <i class="fa fa-lock"></i> <input type="password"
+                                              class="form-control" placeholder="Confirmation" name="password2" required="required">
+        </div>
+        <div class="form-group">
+            <input type="submit" class="btn btn-primary btn-block btn-lg" value="Inscription">
+        </div>
+    </form>
+</div>

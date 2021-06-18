@@ -483,36 +483,38 @@ table.table{
     font-size: 26px;
 }
 
-.modal-login  .form-group {
+.modal-login  .form-group , .login-form .form-group {
     position: relative;
 }
 
-.modal-login i {
+.modal-login i , .login-form i{
     position: absolute;
     left: 13px;
     top: 11px;
     font-size: 18px;
 }
 
-.modal-login .form-control {
+.modal-login .form-control, .login-form .form-control {
     padding-left: 40px;
 }
 
-.modal-login .form-control:focus {
+/*.modal-login */
+.form-control:focus {
     border-color: #00ce81;
 }
 
-.modal-login .form-control, .modal-login .btn {
+/*.modal-login */
+.form-control, .btn {
     min-height: 40px;
     border-radius: 3px;
 }
 
-.modal-login .hint-text {
+.modal-login .hint-text , .login-form  .hint-text {
     text-align: center;
     padding-top: 10px;
 }
 
-.modal-login .close {
+.modal-login .close{
     position: absolute;
     top: -5px;
     right: -5px;
@@ -524,7 +526,7 @@ table.table{
     line-height: normal;
 }
 
-.modal-login .btn:hover, .modal-login .btn:focus {
+.modal-login .btn:hover, .modal-login .btn:focus , .login-form .btn:hover, .login-form .btn:focus{
     background: #00bf78 !important;
 }
 
